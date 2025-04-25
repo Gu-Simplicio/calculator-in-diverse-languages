@@ -8,35 +8,36 @@
 </head>
 <body>
     <div id="calculator" class="container border rounded shadow py-2 px-3 d-flex flex-column gap-3">
-        <div class="row">
-            <input type="text" class="form-control text-end fs-1" placeholder="Teste" readonly disabled>
+        <div class="row form-floating">
+            <label for="resultInput" class="text-end" id="count">Let's calculate!</label>
+            <input type="text" class="form-control text-end fs-1" id="resultInput" placeholder="let's calculate" readonly disabled> 
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="C" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="C" onclick="clearAll()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="<-" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="<-" onclick="removeOne()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="%" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="%" onclick="addOperation()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="+" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="+" onclick="addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="7" onclick="addNumber()" class="btn btn-outline-secondary">
+                <input type="button" value="7" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="8" onclick="addNumber()" class="btn btn-outline-secondary">
+                <input type="button" value="8" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="9" onclick="addNumber()" class="btn btn-outline-secondary">
+                <input type="button" value="9" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="-" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="-" onclick="addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
@@ -50,7 +51,7 @@
                 <input type="button" value="6" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="*" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="*" onclick="addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
@@ -64,7 +65,7 @@
                 <input type="button" value="3" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="/" onclick="" class="btn btn-outline-secondary">
+                <input type="button" value="/" onclick="addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
@@ -72,9 +73,11 @@
                 <input type="button" value="0" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col-2 d-grid">
-                <input type="button" value="=" onclick="showResult()" class="btn btn-outline-secondary" disabled="true">
+                <input type="button" value="=" class="btn btn-outline-secondary" id="showResultInput" disabled="true">
             </div>
         </div>
     </div>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
