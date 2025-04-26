@@ -8,76 +8,76 @@
 </head>
 <body>
     <div id="calculator" class="container border rounded shadow py-2 px-3 d-flex flex-column gap-3">
-        <div class="row form-floating">
-            <label for="resultInput" class="text-end" id="count">Let's calculate!</label>
+        <div class="row">
             <input type="text" class="form-control text-end fs-1" id="resultInput" placeholder="let's calculate" readonly disabled> 
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="C" onclick="clearAll()" class="btn btn-outline-secondary">
+                <input type="button" value="C" onclick="calculator.clearAll()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="<-" onclick="removeOne()" class="btn btn-outline-secondary">
+                <input type="button" value="<-" onclick="calculator.removeOne()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="%" onclick="addOperation()" class="btn btn-outline-secondary">
+                <input type="button" value="%" onclick="calculator.addOperation()" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="+" onclick="addOperation()" class="btn btn-outline-secondary">
+                <input type="button" value="+" onclick="calculator.addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="7" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="7" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="8" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="8" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="9" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="9" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="-" onclick="addOperation()" class="btn btn-outline-secondary">
+                <input type="button" value="-" onclick="calculator.addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="4" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="4" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="5" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="5" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="6" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="6" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="*" onclick="addOperation()" class="btn btn-outline-secondary">
+                <input type="button" value="*" onclick="calculator.addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
             <div class="col d-grid">
-                <input type="button" value="1" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="1" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="2" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="2" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="3" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+                <input type="button" value="3" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
             <div class="col d-grid">
-                <input type="button" value="/" onclick="addOperation()" class="btn btn-outline-secondary">
+                <input type="button" value="/" onclick="calculator.addOperation()" class="btn btn-outline-secondary">
             </div>
         </div>
         <div class="row">
-            <div class="col-10 d-grid">
-                <input type="button" value="0" onclick="addNumber(this.value)" class="btn btn-outline-secondary">
+            <div class="col-8 d-grid">
+                <input type="button" value="0" onclick="calculator.addNumber(this.value)" class="btn btn-outline-secondary">
             </div>
+            <div class="col-2 d-grid"><input type="button" value="," onclick="calculator.addComma(this.value)" class="btn btn-outline-secondary"></div>
             <div class="col-2 d-grid">
                 <input type="button" value="=" class="btn btn-outline-secondary" id="showResultInput" disabled="true">
             </div>
         </div>
     </div>
 
-    <script src="calculator.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
