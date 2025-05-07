@@ -37,9 +37,11 @@ bool stopOrNo(){
         }
     }
 
-    if(checkStop == 's'){
+    if(checkStop == 'n'){
         return true;
-    }   
+    } else {
+        return false;
+    }
 }
 
 int main(){
@@ -52,9 +54,10 @@ int main(){
     };
     char operationSelected = ' ';
     float numberOne, numberTwo;
+    bool stillCalc = true;
 
     cout << "Welcome to the C++ calculator!\n";
-    while(true){
+    while(stillCalc == true){
         cout << "insert the first number: ";
         cin >> numberOne;
         cout << endl;
@@ -81,9 +84,7 @@ int main(){
 
         calculate(numberOne, numberTwo, operationSelected);
 
-        if(stopOrNo()){
-            break;
-        }
+        stillCalc = stopOrNo();
     }
     cout << "Thanks for calculate\n";
 
