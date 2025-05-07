@@ -1,18 +1,24 @@
+#function that check if the calculator will stop
 def check_stop():
+    #variable that will receive the answer
     answer = ''
-
+ 
+    #while the answer isn't true and isn't false
     while answer != True and answer != False:
+        #capture the answer
         char_insert = input("Do you want to stop the calculator, y or n?").lower()
         
-        if(char_insert == 's'):
+        #check if is true or false
+        if(char_insert == 'y'):
             answer = True
         elif(char_insert == 'n'):
             answer = False
-        else:
+        else: #if isn't y or n
             print("INSERT 'y' OR 'n'!")
 
-    return answer
+    return answer #return the answer
 
+#function that will make the calc and show the result
 def calculate(first, second, op):
     if(op == '+'):
         result = f"{first} + {second} = {first + second}"

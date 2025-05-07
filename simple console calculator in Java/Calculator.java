@@ -90,6 +90,8 @@ public class Calculator {
     static boolean checkIfStillCalc(Scanner scanner){
         //char variable that will receive the check
         char check = ' ';
+        //variable that will return if still calculating or no
+        boolean still = true;
 
         //while the check isn't y or 'n'
         while(check != 'y' && check != 'n'){
@@ -98,20 +100,16 @@ public class Calculator {
             //capture the answer with scanner
             check = scanner.nextLine().charAt(0);
 
-            //if the check is not 'y' or 'n'
-            if(check != 'y' && check != 'n'){
+            //if the user answered y
+            if(check == 'y') {
+                still = true; //still calculating
+            } else if(check == 'n'){  //if the user answered n
+                still = false; //still not calculating
+            }else { //if the check is not 'y' or 'n'
                 //show the error
                 System.out.println("You must type 'y' or 'n'!");
             }
         }
-
-        //variable that will return if still calculating or no
-        boolean still = true;
-
-        //if the user answered y
-        if(check == 'y') still = true; //still calculating
-        //if the user answered n
-        if(check == 'n') still = false; //still not calculating
 
         //return the still
         return still;
