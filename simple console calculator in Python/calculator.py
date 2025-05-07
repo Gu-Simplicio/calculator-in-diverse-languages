@@ -20,6 +20,7 @@ def check_stop():
 
 #function that will make the calc and show the result
 def calculate(first, second, op):
+    #check which calcule was inserted and show the result
     if(op == '+'):
         result = f"{first} + {second} = {first + second}"
     elif(op == "-"):
@@ -33,14 +34,19 @@ def calculate(first, second, op):
 
     print(result)
     
-def show():
-    while True:        
+#function that will start the calculator
+def calculator():
+    #while true..
+    while True:  
+        #capture the numbers      
         first_number = float(input("Insert the first number: "))
         second_number = float(input("Insert the second number: "))
 
-        operation = ''
+        operation = '' #start the operation variable
 
+        #while the operation isn't defined
         while operation == '':
+            #preint the options
             print("\nChoose which operation you want to do")
             print("insert + to sum")
             print("insert - to submit")
@@ -48,18 +54,22 @@ def show():
             print("insert / to divide")
             print("insert %  to get the percent")
 
+            #capture the operation
             operation = input("insert the operation: ")
 
+            #if the operation isn't valid
             if(operation != '+' and operation != '-' and operation != '*' and operation != '/' and operation != '%'):
-                operation = ''
-                print("\nINSERT ONE OF THE OPTIONS")
+                operation = '' #reset operation
+                print("\nINSERT ONE OF THE OPTIONS") #show the error
 
+        #start the function calculate
         calculate(first_number, second_number, operation)
 
-        stop_or_no = check_stop()
-        if(stop_or_no):
+        if(check_stop()): #check if the user will calculate again
+            #if the calculator will stop, show the message
             print("Thanks for calculate!")
-            break
+            break #break the function
 
+#start the calculator
 print("WELCOME TO THE SIMPLE PYTHON CALCULATOR!")
-show()
+calculator()
