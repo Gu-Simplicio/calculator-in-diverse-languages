@@ -1,5 +1,4 @@
-# calculator created in the languages that I know
-(to brazilians: a versão em português está mais abaixo)
+# calculator created in some languages
 
 ## Text in english
 
